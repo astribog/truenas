@@ -70,7 +70,7 @@ for DNS in "${DNS_POOL[@]}"; do
          TARGET_NAME=$(_jq '.name')
          TARGET_ID=$(_jq '.id')
          # Check if the extent name contains the DNS name
-         if [[ $TARGET_NAME == *"$DNS"* ]]; then
+         if [[ $TARGET_NAME == *"$DNS" ]]; then
             # Associate Target and Extent
             midclt call iscsi.targetextent.create '{
                "target": '$TARGET_ID',
